@@ -1,0 +1,127 @@
+<sly data-sly-use.model="com.zensar.core.models.HeaderModel">
+  <div class="container">
+    <div class="header-container row">
+      <div class="col-sm-12" role="heading" aria-level="1">
+          <div class="header__container">
+            <div class="region region-header">
+                <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+                <img src="${model.fileReference}" alt="${model.alt}" width="177" height="18">
+                </a>
+                <div class="lang-switch dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">Global-EN<span class="caret"></span></a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li class="dropdown-item"> <a href="https://www.tateandlyle.com/" class="l-active">Global-EN</a> </li>
+                      <li class="dropdown-item"> <a href="https://www.tateandlyle.com/latam-es/es-home">LATAM-ES</a> </li>
+                      <li class="dropdown-item"> <a href="https://www.tateandlyle.com/latam-pt/pt-home">LATAM-PT</a> </li>
+                      <li class="dropdown-item"> <a href="https://www.tateandlyle.com/zh-cn/zh-home">Chinese, [中文]</a> </li>
+                  </ul>
+                </div>
+                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" data-block-plugin-id="system_menu_block:main">
+                  <h2 class="sr-only" id="block-mainnavigation-menu" data-gtm-vis-first-on-screen-7970307_13="123">Main navigation</h2>
+                  <div class="container">
+                      <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <ul class="menu nav navbar-nav">
+                              <sly data-sly-list.item="${model.mainNavList}">
+                                <li class="menu-icon menu-icon-121 expanded ${item.subNavList ? 'dropdown':''} ${itemList.first ? 'active':'' }">
+                                    <a href="${item.link}" class="dropdown-toggle" data-target="#">${item.label}<span class="caret"></span></a>
+                                    <ul class="menu dropdown-menu">
+                                      <sly data-sly-list.subNav="${item.subNavList}">
+                                        <li class="menu-icon menu-icon-1231 expanded">
+                                            <a href="${subNav.link}">${subNav.label}</a>
+                                        </li>
+                                      </sly>
+                                    </ul>
+                                </li>
+                              </sly>
+                            </ul>
+                        </div>
+                      </nav>
+                  </div>
+                </nav>
+                <section id="block-talmainmenu" data-block-plugin-id="tal_mega_menu" class="block block-tal-mega-menu clearfix">
+                  <nav class="navbar navbar-default" role="navigation">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <sly data-sly-list.item="${model.blocNavList}">
+                              <li class="dropdown level-1">
+                                <a href="${item.link}" data-toggle="dropdown" class="dropdown-toggle" data-drupal-link-system-path="node/966">${item.label}</a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                  <li class="row">
+                                  <sly data-sly-list.blocNavItem="${item.blocNavItems}">
+                                    <div class="col-sm-6 col-md-4">
+                                      <h3><span data-sly-test="${blocNavItem.label}" class="focus--title">${blocNavItem.label}</span></h3>
+                                        <ul class="multi-column-dropdown">
+                                          <sly data-sly-list.blocSubNav="${blocNavItem.blocSubNavList}">
+                                            <li class="level-3 ${blocSubNav.dsc ? 'dsc':'' }">
+                                                <a href="${blocSubNav.link}.html" class="focus--title" data-drupal-link-system-path="node/16921">${blocSubNav.label}</a>
+                                                <p data-sly-test="${blocSubNav.dsc}" class="focus--description">${blocSubNav.dsc}</p>
+                                            </li>
+                                          </sly>
+                                        </ul>
+                                      </div>
+                                    </sly>
+                                  </li>
+                                </ul>
+                              </li>
+                            </sly>
+                            <li class="dropdown level-1 search-menu">
+                              <a href="https://www.tateandlyle.com/search" data-toggle="dropdown" class="dropdown-toggle" data-drupal-link-system-path="search">search</a>
+                              <ul class="dropdown-menu multi-column columns-3">
+                                  <li class="row">
+                                    <div class="Myclass form-group">
+                                        <section class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-search-page clearfix" data-drupal-selector="views-exposed-form-search-search-page" id="block-exposedformsearchsearch-page-2" data-block-plugin-id="views_exposed_filter_block:search-search_page">
+                                          <form action="/search" method="get" id="views-exposed-form-search-search-page" accept-charset="UTF-8">
+                                              <div class="form--inline form-inline clearfix">
+                                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-s js-form-item-s form-group">
+                                                    <label for="tal-edit-search-page" class="control-label">Search for</label>
+                                                    <span class="input--wrapper">
+                                                      <label style="display:none !important;" for="edit-keyword">Search</label><input data-drupal-selector="tal-edit-search-page" class="form-text form-control" type="text" id="tal-edit-search-page" name="s" value="" size="30" maxlength="128">
+                                                      <p class="input--title">
+                                                      <div id="tal-edit-search-page--description" class="description help-block">
+                                                          Use ingredient names, brands, types, scientific names etc.
+                                                      </div>
+                                                      </p>
+                                                    </span>
+                                                </div>
+                                                <div class="hide">
+                                                    <div class="form-item js-form-item form-type-select js-form-type-select form-item-sort-by js-form-item-sort-by form-group">
+                                                      <label for="tal-edit-search-page-sort-by" class="control-label">Sort by</label>
+                                                      <div class="select-wrapper">
+                                                          <select data-drupal-selector="tal-edit-search-page-sort-by" class="form-select form-control" id="tal-edit-search-page-sort-by" name="sort_by">
+                                                            <option value="search_api_relevance" selected="selected">Relevance</option>
+                                                            <option value="changed">Changed</option>
+                                                            <option value="title">Title</option>
+                                                          </select>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-search" class="button js-form-submit form-submit btn-primary btn icon-before" type="submit" id="edit-submit-search" value="Search" name=""><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>
+                                                    Search</button>
+                                                </div>
+                                              </div>
+                                          </form>
+                                        </section>
+                                    </div>
+                                  </li>
+                              </ul>
+                            </li>
+                        </ul>
+                      </div>
+                  </nav>
+                </section>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</sly>

@@ -1,0 +1,56 @@
+<sly data-sly-use.model="com.zensar.core.models.LatestNewsModel">
+   <section data-block-plugin-id="block_content:cb41a655-6790-46b7-9024-bf1b5bce0342" class="block block-block-content block-block-contentcb41a655-6790-46b7-9024-bf1b5bce0342 slick-carousel-block block--dynamic-posts clearfix">
+      <h2 class="block-title">${model.title}</h2>
+      <div class="slick-carousel-wrapper">
+         <div>
+            <h2 class="posts__title">${model.title}</h2>
+            <div class="views-element-container form-group">
+               <div class="view view-articles-post view-id-articles_post view-display-id-block_6 js-view-dom-id-2566388b1542ea889328145b25a126e44adcb7c27368021bd787d0ff690d7f20">
+                  <div class="view-content">
+                     <div class="slick blazy slick--view slick--view--articles-post slick--view--articles-post--block-6 slick--view--articles-post-block-block-6 slick--optionset--latest-news slick--multiple-view slick--initialized" data-blazy="" id="slick-views-articles-post-block-block-6-1" data-once="blazy">
+                        <div id="slick-views-articles-post-block-block-6-1-slider" data-slick="{&quot;autoplay&quot;:true,&quot;draggable&quot;:false,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;slidesPerRow&quot;:3,&quot;slidesToShow&quot;:3,&quot;slidesToScroll&quot;:3,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1168,&quot;settings&quot;:{&quot;slidesPerRow&quot;:2,&quot;slidesToShow&quot;:2}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;adaptiveHeight&quot;:true,&quot;autoplay&quot;:true,&quot;centerMode&quot;:true,&quot;centerPadding&quot;:&quot;&quot;,&quot;draggable&quot;:false,&quot;swipe&quot;:false,&quot;touchMove&quot;:false,&quot;waitForAnimate&quot;:false}}]}" class="slick__slider slick-initialized slick-slider">
+                           <div class="slick-list">
+                              <div class="slick-track" style="opacity: 1; width: 7329px; transform: translate3d(-1047px, 0px, 0px);">
+                                 <sly data-sly-list.item="${model.carouselItems}">
+                                    <div class="slick__slide slide slide--${itemList.index} slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" style="width: 349px;" tabindex="-1">
+                                       <article role="article" about="/news/tate-lyle-feature-comprehensive-solutions-future-bakery-ibie-2022">
+                                          <a class="news-teaser-overlay" href="/news/tate-lyle-feature-comprehensive-solutions-future-bakery-ibie-2022" tabindex="-1"></a>
+                                          <div>
+                                             <a href="/news/tate-lyle-feature-comprehensive-solutions-future-bakery-ibie-2022" tabindex="-1">
+                                                <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img src="${item.fileReference}" width="312" height="169" alt="healthier low sugar cake" title="healthier low sugar cake" typeof="foaf:Image" class="img-responsive">
+                                                </div>
+                                                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">CHICAGO (US), 9 September 2022 — Tate &amp; Lyle, a leading global provider of food and beverage ingredients and solutions, invites International Baking Industry Exposition (IBIE) attendees to experience its broad and innovative expertise in bakery...</div>
+                                             </a>
+                                          </div>
+                                          <h2 class="threecol__title__wrap">
+                                             <a href="${item.link}" rel="bookmark" tabindex="-1"><span>${item.label}</span>
+                                             </a>
+                                          </h2>
+                                          <div class="read-more"><a href="/news/tate-lyle-feature-comprehensive-solutions-future-bakery-ibie-2022" tabindex="-1">To read more about the article click here</a> </div>
+                                       </article>
+                                    </div>
+                                 </sly>
+                              </div>
+                           </div>
+                        </div>
+                        <nav role="navigation" class="slick__arrow">
+                           <a href="#" data-role="none" class="glyphicon glyphicon-menu-left slick-prev slick-arrow" aria-label="Previous" role="button" style="display: inline-block;"></a>
+                           <a href="#" data-role="none" class="glyphicon glyphicon-menu-right slick-next slick-arrow" aria-label="Next" role="button" style="display: inline-block;"></a>
+                        </nav>
+                        <div role="navigation" class="slick__arrow nav-left slicknav" style="line-height: 287px;">
+                           <a href="#" data-role="none" class="glyphicon glyphicon-menu-left slick-prev slick-arrow" aria-label="Previous" role="button" style="display: inline-block;"></a>
+                        </div>
+                        <div role="navigation" class="slick__arrow slicknav nav-right" style="line-height: 287px;">
+                           <a href="#" data-role="none" class="glyphicon glyphicon-menu-right slick-next slick-arrow" aria-label="Next" role="button" style="display: inline-block;"></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="view-footer">S
+                     <span class="show-all-article"><a href="/articles/all">See all news</a></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</sly>

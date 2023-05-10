@@ -1,0 +1,15 @@
+<sly data-sly-use.model="com.zensar.core.models.InnovationModel">
+<section data-block-plugin-id="block_content:1ca79824-2c04-48e6-956b-95099ecb5568" class="block block-block-content block-block-content1ca79824-2c04-48e6-956b-95099ecb5568 block-banner clearfix" style="background-image: url(${model.fileReference @context='scriptString'})">
+    <div class="banner__overlay__block">
+      <div class="banner__background-overlay"></div>
+      <div class="banner__overlay--content">
+          <div class="banner__overlay--left">
+            <div class="banner--inner ">
+                <div class="field field--name-field-banner-title field--type-string field--label-hidden field--item">${model.title}</div>
+                <div class="field field--name-field-short-summary field--type-string-long field--label-hidden field--item">${model.description}<br role="presentation" data-uw-rm-sr=""></div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+</sly>

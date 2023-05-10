@@ -1,0 +1,20 @@
+<sly data-sly-use.customerFeedback="com.zensar.core.models.CustomerFeedbackModel">
+   <section data-block-plugin-id="block_content:a4d37407-1f4a-4946-a3dc-15d7675e982a" class="block block-block-content block-block-contenta4d37407-1f4a-4946-a3dc-15d7675e982a block--content-promo clearfix">
+      <div class="block__promo--main">
+         <div class="field field--name-field-block-title field--type-string field--label-hidden field--item">${customerFeedback.title}</div>
+         <div class="field field--name-field-promo-content field--type-entity-reference-revisions field--label-hidden field--items">
+            <sly data-sly-list.item="${customerFeedback.customerFeedback}">
+               <div class="field--item">
+                  <div class="paragraph paragraph--type--promo-body-with-link-url paragraph--view-mode--default">
+                     <div class="field field--name-field-block-body field--type-text-long field--label-hidden field--item">
+                        <p>${item.customerComment}</p>
+                     </div>
+                     <div class="field field--name-field-tal-link field--type-link field--label-hidden field--item"><a href="${item.link}">${item.label}</a></div>
+                  </div>
+               </div>
+            </sly>
+         </div>
+      </div>
+   </section>
+</sly>
+                        

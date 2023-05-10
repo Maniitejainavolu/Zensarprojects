@@ -1,0 +1,104 @@
+<sly data-sly-use.model="com.zensar.core.models.HeroCarouselModel">
+   <section data-block-plugin-id="block_content:e9a21d0a-0b13-4cd2-b058-8648fde5e581" class="block block-block-content block-block-contente9a21d0a-0b13-4cd2-b058-8648fde5e581 block--homepage-banner clearfix">
+      <div class="component__banner--inner">
+         <div class="tal--banner-background-image">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+               <div class="carousel-inner" aria-label="homepage banner carousel" role="listbox">
+                  <sly data-sly-list.item="${model.carouselItems}">
+                     <div class="item slide-${itemList.index} ${itemList.first ? 'active':'' }" role="option">
+                        <a class="carousel-control left text-color-white" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-menu-left" style="top: 249.5px;"></span>
+                        <span class="sr-only" data-gtm-vis-first-on-screen-7970307_13="1527">Previous</span>
+                        </a>
+                        <a class="carousel-control right text-color-white" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-menu-right" style="top: 249.5px;"></span>
+                        <span class="sr-only" data-gtm-vis-first-on-screen-7970307_13="1529">Next</span>
+                        </a>
+                        <div class="paragraph paragraph--type--banner-item paragraph--view-mode--default" id="paragraph-33896">
+                           <div class="field field--name-field-banner-image field--type-image field--label-hidden field--item">
+                              <picture>
+                                 <source srcset="${item.fileReference}" media="all and (min-width: 450px)" type="image/jpeg">
+                                 <img src="${item.fileReference}" alt="Shopping trolley view of supermarket aisle" title="Shopping trolley view of supermarket aisle" typeof="foaf:Image" class="img-responsive">
+                              </picture>
+                           </div>
+                           <div class="mobile-banner-img" style="background-image:url(https://www.tateandlyle.com/sites/default/files/2022-12/Shopping-trolley-view-of-supermarket-aisle.jpg);background-position:left"> </div>
+                           <div class="position-right bg-black carousel-caption">
+                              <div class="promo-area text-color-indicator-wrapper-white" style="height: auto;">
+                                 <!-- Title -->
+                                 <h2 class="text-color-white promo-title">
+                                    ${item.title}
+                                 </h2>
+                                 <!-- Sub Title -->
+                                 <p class="text-color-white subtitle">
+                                    ${item.description}
+                                 </p>
+                                 <!-- Link -->
+                                 <a href="${item.link}" class="btn banner-button link-color-white hover-bg-blue">${item.label}</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </sly>
+               </div>
+               <!-- Indicators -->
+               <ol class="carousel-indicators text-color-black">
+                  <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                  <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+               </ol>
+               <!-- Left and right controls -->
+            </div>
+         </div>
+         <div class="tal__banner--content">
+            <div class="tal-banner-description">
+               <h1 class="title">
+                  <hr>
+                  <div class="field field--name-field-title field--type-string field--label-hidden field--item">${model.heading}</div>
+               </h1>
+               <div class="field field--name-field-description field--type-text-long field--label-hidden field--item">
+                  <p>${model.description}</p>
+               </div>
+            </div>
+            <div class="banner--links dropdown">
+               <div>
+                  <div data-block-plugin-id="block_content:e9a21d0a-0b13-4cd2-b058-8648fde5e581" class="block block-block-content block-block-contente9a21d0a-0b13-4cd2-b058-8648fde5e581 block--homepage-banner clearfix tal-banner-menu-wrapper-left left-icon">
+                     <div class="field field--name-field-icon field--type-entity-reference field--label-hidden field--item">
+                        <article role="article" about="/content/icon-black-bowl" class="icon default clearfix">
+                           <h2 class="hide">
+                              <a href="/content/icon-black-bowl" rel="bookmark"><span>Icon-Black-Bowl</span>
+                              </a>
+                           </h2>
+                           <div class="content">
+                              <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img src="https://www.tateandlyle.com/sites/default/files/styles/icon_48px_width/public/Icon-Black-Bowl-2x.png?itok=-PS5MGNq" width="48" height="24" alt="Icon - Black bowl" title="Icon - Black bowl" typeof="foaf:Image" class="img-responsive">
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+                     <div class="field field--name-field-left-link field--type-link field--label-hidden field--items">
+                        <div class="field--item"><a href="${model.ingredientLink}">${model.ingrdientLabel}</a></div>
+                     </div>
+                  </div>
+                  <div data-block-plugin-id="block_content:e9a21d0a-0b13-4cd2-b058-8648fde5e581" class="block block-block-content block-block-contente9a21d0a-0b13-4cd2-b058-8648fde5e581 block--homepage-banner clearfix tal-banner-menu-wrapper-left left-icon tal-banner-menu-wrapper-right right-icon">
+                     <div class="field field--name-field-right-icon field--type-entity-reference field--label-hidden field--item">
+                        <article role="article" about="/content/icon-black-twopeople" class="icon default clearfix">
+                           <h2 class="hide">
+                              <a href="https://www.tateandlyle.com/content/icon-black-twopeople" rel="bookmark"><span>Icon-Black-TwoPeople</span>
+                              </a>
+                           </h2>
+                           <div class="content">
+                              <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img src="https://www.tateandlyle.com/sites/default/files/styles/icon_48px_width/public/Icon-Black-TwoPeople-2x.png?itok=7U8Bu9F5" width="48" height="43" alt="Icon - Black two people" title="Icon - Black two people" typeof="foaf:Image" class="img-responsive">
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+                     <div class="field field--name-field-right-link field--type-link field--label-hidden field--items">
+                        <div class="field--item"><a href="${model.partnerLabel}">${model.partnerLabel}</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</sly>
+                       

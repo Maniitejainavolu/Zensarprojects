@@ -1,0 +1,15 @@
+<sly data-sly-test="${(wcmmode.edit || wcmmode.design) && !properties.htmlCode}">
+    <div class="cq-placeholder" data-emptyText="${component.title}"></div>
+</sly>
+
+<sly data-sly-test=${properties.htmlCode}>
+	<style data-sly-test=${properties.cssCode}>
+		${properties.cssCode @ context='unsafe'}
+	</style>
+	
+	${properties.htmlCode @ context='unsafe'}
+	
+	<script data-sly-test=${properties.jsCode}>
+		${properties.jsCode @ context='unsafe'}
+	</script>
+</sly>

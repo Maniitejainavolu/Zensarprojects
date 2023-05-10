@@ -1,0 +1,18 @@
+<sly data-sly-use.model="com.zensar.core.models.ResearchModel">
+ <section data-block-plugin-id="block_content:3cae42af-2b5e-4a32-ac30-bab250c8e6bb" class="block block-block-content block-block-content3cae42af-2b5e-4a32-ac30-bab250c8e6bb light-grey dcp-content-3 block-bg block-detail-content-promo clearfix">
+  <div class="field field--name-field-banner-title field--type-string field--label-hidden field--item">${model.title}</div>
+  <div class="field field--name-field-dcp-content-section field--type-entity-reference-revisions field--label-hidden field--items">
+    <sly data-sly-list.research="${model.researchList}">
+    <div class="field--item">
+      <div class="paragraph paragraph--type--detail-content-promo paragraph--view-mode--default">
+          <h3 class="field--name-field-simple-text">
+          ${research.caption}
+          </h3>
+          <div class="field field--name-field-simple-summary field--type-string-long field--label-hidden field--item">${research.description}</div>
+          <div class="field field--name-field-dcp-link field--type-link field--label-hidden field--item"><a href="${research.link}">${research.label}</a></div>
+      </div>
+    </div>
+  </sly>
+  </div>
+ </section>
+</sly>

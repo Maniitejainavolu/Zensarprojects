@@ -1,0 +1,52 @@
+<sly data-sly-use.model="com.zensar.core.models.FooterModel">
+        <footer class="footer page--footer container" role="contentinfo">
+          <div class="region region-footer">
+            <section id="block-footerlogoandslogan" data-block-plugin-id="block_content:26c16e12-4a16-4e7a-bc8a-bddc002b4964" class="block block-block-content block-block-content26c16e12-4a16-4e7a-bc8a-bddc002b4964 block__logo--slogan clearfix">
+              <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                <div data-embed-button="tal_embed" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="9149eeca-e17b-41ec-a773-4d3c0e7307d3" data-langcode="en" class="embedded-entity">
+                  <div>
+                    <div class="field field--name-image field--type-image field--label-hidden field--item">
+                      <img src="${model.fileReference}" width="177" height="18" alt="${model.alt}" typeof="foaf:Image" title="logo white 0 0" class="img-responsive" />
+                    </div>
+                  </div>
+                </div>
+                <p>${model.text}</p>
+              </div>
+            </section>
+            <sly data-sly-list.item="${model.footerNavList}">
+              <nav role="navigation" aria-labelledby="block-${item.subNavId}-menu" id="block-${item.subNavId}" data-block-plugin-id="system_menu_block:footer-navigation-menu">
+                <ul class="menu menu--footer-navigation-menu nav">
+                  <sly data-sly-list.subNav="${item.footerSubNavList}">
+                    <li class="menu-icon menu-icon-31 active active-trail first">
+                      <a href="${subNav.link}" class="active-trail is-active" data-drupal-link-system-path="node/12671">${subNav.label}</a>
+                    </li>
+                  </sly>
+                </ul>
+              </nav>
+            </sly>
+            <section id="block-headoffice" data-block-plugin-id="block_content:1d84a4ee-02a3-4532-8020-37b70a151f63" class="block block-block-content block-block-content1d84a4ee-02a3-4532-8020-37b70a151f63 block__headoffice-address clearfix">
+              <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                <p><strong>${model.addressLabel}</strong></p>
+                <p>${model.address}</p>
+                <sly data-sly-list.socialMedia="${model.socialMedia}">
+                  <a href="${socialMedia.link}" target="_blank">
+                    <div data-embed-button="tal_embed" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="def65767-ff4e-4e8c-8446-ba6e6996862d" data-langcode="en" class="embedded-entity">
+                      <div>
+                        <div class="field field--name-image field--type-image field--label-hidden field--item">
+                          <img src="${socialMedia.fileReference}" width="30" height="30" alt="${socialMedia.alt}" typeof="foaf:Image" title="${socialMedia.alt}" class="img-responsive" />
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </sly>
+              </div>
+            </section>
+            <section id="block-copyright" data-block-plugin-id="block_content:1fb6ccac-5b4e-49a6-b3ff-7801f6f3f248" class="block block-block-content block-block-content1fb6ccac-5b4e-49a6-b3ff-7801f6f3f248 block__footer-copyright clearfix">
+              <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                <p>${model.disclaimer}</p>
+              </div>
+            </section>
+          </div>
+        </footer>
+      </sly>
+      

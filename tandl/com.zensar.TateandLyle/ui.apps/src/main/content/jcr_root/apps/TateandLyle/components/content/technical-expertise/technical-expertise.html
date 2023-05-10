@@ -1,0 +1,46 @@
+<sly data-sly-use.technicalExpertise="com.zensar.core.models.TechnicalExpertiseModel">
+   <section data-block-plugin-id="block_content:8e16e14c-d526-4237-a692-41be4df6a1d9" class="block block-block-content block-block-content8e16e14c-d526-4237-a692-41be4df6a1d9 block--content-promo-images promo__images-3 clearfix" style="background-image: url(${technicalExpertise.fileReference @context='scriptString'});">
+      <div class="promo__images--inner">
+         <div class="promo__images--title">
+            <hr>
+            <h3 class="promo--title">
+               <div class="field field--name-field-block-title field--type-string field--label-hidden field--item">${technicalExpertise.title}</div>
+            </h3>
+         </div>
+         <div class="promo__images--main">
+            <div class="promo__images--content">
+               <div class="field field--name-field-content-details field--type-entity-reference-revisions field--label-hidden field--items">
+                  <sly data-sly-list.item="${technicalExpertise.expertiseList}">
+                     <div class="field--item">
+                        <div class="paragraph paragraph--type--content-promo-with-image paragraph--view-mode--default">
+                           <div class="promo__paragraph--wrapper">
+                              <div class="promo__images__banner" data-sly-test="${item.fileReference}">
+                                 <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img src="${item.fileReference}" width="277" height="150" alt="${item.alt}" title="${item.alt}" typeof="foaf:Image" class="img-responsive">
+                                 </div>
+                              </div>
+                              <div class="promo__paragaph--content">
+                               <!---- <div class="field field--name-field-icon field--type-image field--label-hidden field--item">  <img src="${item.fileReference}" width="48" height="40" alt="${item.alt}" title="${item.alt}" typeof="foaf:Image" class="img-responsive">
+                                 </div>-->
+                                 <div class="promo__images-title">
+                                    <a href="/our-expertise/beverages" class="promo__title--link">
+                                       <div class="field field--name-field-title field--type-string field--label-hidden field--item">${item.caption}</div>
+                                    </a>
+                                 </div>
+                                 <div class="promo__images-detail">
+                                    <div class="field field--name-field-simple-summary field--type-string-long field--label-hidden field--item">${item.description}</div>
+                                    <div class="field field--name-field-tal-more field--type-link field--label-hidden field--item"><a href="${item.link}">${item.label}</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </sly>
+               </div>
+            </div>
+            <div class="promo__images--commonlink" data-sly-test="${technicalExpertise.label}">
+               <div class="field field--name-field-block-common-link- field--type-link field--label-hidden field--item"><a href="${technicalExpertise.link}">${technicalExpertise.label}</a></div>
+            </div>
+         </div>
+      </div>
+   </section>
+</sly>
